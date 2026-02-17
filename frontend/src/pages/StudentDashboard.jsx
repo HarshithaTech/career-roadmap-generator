@@ -60,7 +60,8 @@ export function StudentDashboard() {
             setStep(2); // Move to Target Role step
         } catch (error) {
             console.error("Upload failed", error);
-            alert("Failed to upload resume.");
+            const errorMessage = error.response?.data?.detail || "Failed to upload resume. Please try a different file.";
+            alert(errorMessage);
         } finally {
             setUploading(false);
         }
