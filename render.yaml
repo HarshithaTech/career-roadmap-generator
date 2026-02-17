@@ -19,7 +19,7 @@ services:
         sync: false # User must set this in Render dashboard
 
   # Frontend: React (Vite)
-  - type: static
+  - type: web
     name: career-roadmap-frontend
     runtime: static
     buildCommand: npm install && npm run build
